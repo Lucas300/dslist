@@ -18,13 +18,16 @@ public class Belonging {
 	private Integer position;
 	
 	public Belonging() {
+	    this.id = new BelongingPK();
 	}
-	
-	public Belonging(Game game,GameList list, Integer position) {
-		id.setGame(game);
-		this.id.setList(list);
-		this.position = position;
+
+	public Belonging(Game game, GameList list, Integer position) {
+	    this.id = new BelongingPK();
+	    this.id.setGame(game);
+	    this.id.setList(list);
+	    this.position = position;
 	}
+
 
 	public BelongingPK getId() {
 		return id;
