@@ -21,6 +21,7 @@ public class GameService {
 	public List<GameMinDTO> findAll(){
 		
 		List<Game> result = gameRepository.findAll();
+		//convertendo a lista de Game para GameMinDTO
 		List<GameMinDTO> dto = result.stream().map(x -> new GameMinDTO(x)).toList();
 		
 		return dto;
